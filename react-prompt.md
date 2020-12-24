@@ -27,8 +27,8 @@ try using Hasura Subscriptions for this), filtering, sort, search, the ability
 to copy paste from another spreadsheet, etc. Use your own discretion to decide
 which features to build in the allotted time. You can use any open source
 packages that you'd like to pull in, including existing spreadsheet libraries.
-This is a lot to build in four hours, so it's reasonable to cut corners and
-focus on building a rough prototype.
+
+This is a lot to build in just a few hours. We would like you to prioritize the work in the same way you prioritize a real project with a fixed timeline. Rather than building all the features halfway, we'd like you to build a few features to completion so we can better test the work. 
 
 ## Tables
 
