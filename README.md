@@ -1,7 +1,5 @@
 # Getting started
 
-## Demo Link
-
 You can view a live demo of the webclient at:
 
 https://investorbook.herokuapp.com/
@@ -27,7 +25,7 @@ http://localhost:3001.
 If you prefer, you can instead run `yarn install` and `yarn start` in the
 `webclient/` subdirectory.
 
-# Submitting Your Solution
+## Submitting Your Solution
 
 To submit your solution, please deploy your app and send us a link to the live
 demo along with a zip file containing the source code.
