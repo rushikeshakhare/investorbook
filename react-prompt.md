@@ -7,7 +7,7 @@ Investors, Companies, and Investments.
 ## Your Task
 
 You met with the CEO and promised to deliver a clean, fast UI for working with
-the data -- in just four hours! The simplest option is to provide a basic CRUD
+the data -- in just four hours! The basic option is to provide a basic CRUD
 interface for the three tables, but if that looks too easy, the advanced version
 is to build a spreadsheet-style interface.
 
