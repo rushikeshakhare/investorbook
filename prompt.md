@@ -40,6 +40,10 @@ Fork this repository and send us a link to your fork after pushing your changes.
 1. What did your do well on the prompt? 
 2. How would you improve the submission if you had more time? 
 
+## Bonus
+
+If you have extra time, it would be impressive to see you complete the front end. Head over to the [react-prompt](https://github.com/ProlificLabs/investorbook/blob/master/react-prompt.md) to read the details. 
+
 ## Evaluation Criteria
 
 - Clean, modular, easy-to-maintain code
