@@ -1,20 +1,23 @@
-# Getting started
+# InvestorBook
 
-You can view a live demo of the webclient at:
+Welcome to InvestorBook, Inc! This is your first week at InvestorBook and you
+are excited to ship a new version of the app.
 
-https://investorbook.herokuapp.com/
+## Your Task
 
-## Postgress Access
+You meet with the CEO and your first task is to decide on what project you want to work on.
 
-You can use this URI to connect to Postgres directly:
+1. Back-end
 
-`postgres://postgres:vrqLs08CazD0j6l8@35.194.8.164:5432`
+    If you want to show your skills writing clean, testable, and performant code for the back-end, check out the `prompt_backend.md` file.
 
-## Hasura Access
+2. Front-end developer
 
-If you would prefer to use a GraphQL API, you can use this endpoint:
+    If you want to show your skills writing clean, testable, and performant code for the front-end, check out the `prompt_frontend.md` file.
 
-https://electric-kangaroo-87.hasura.app/v1/graphql
+3. Integration / Design
+
+    If you want to show your front-end design and integration skills, check out the `prompt_integration.md` file.
 
 ## Webclient Sample App
 
