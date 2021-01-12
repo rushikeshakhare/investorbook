@@ -48,13 +48,3 @@ Please use [create-react-app](https://reactjs.org/docs/create-a-new-react-app.ht
 1. Fork this repository and send us a link to your fork after pushing your changes. 
 2. Host your solution - send us a link to the live app
 3. Share with us your notes or recorded video
-
-If you'd like to use Heroku for the deploy, you can run these commands to deploy
-the app in your Heroku account:
-
-```
-heroku git:remote -a {your_app_name}
-heroku buildpacks:set marks/create-react-app
-git push heroku master
-```
-
