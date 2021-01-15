@@ -1,6 +1,12 @@
 import React, { useReducer, useEffect } from 'react';
-import { recordsReducer, initialState, TYPES } from './SpreadSheetReducer';
-import { ERROR_FETCHING_RECORDS_MESSAGE, LOADING_NEW_RECORDS_MESSAGE } from '../Constants';
+import { recordsReducer, initialState } from './SpreadSheetReducer';
+import { TYPES } from './Types';
+import {
+  ERROR_FETCHING_RECORDS_MESSAGE,
+  LOADING_NEW_RECORDS_MESSAGE,
+  DEFAULT_PAGE_SIZE,
+} from '../../Constants';
+import PropTypes from 'prop-types';
 import './spreadSheet.scss';
 
 export const SpreadSheet = ({ getPageRecords }) => {
@@ -11,7 +17,7 @@ export const SpreadSheet = ({ getPageRecords }) => {
 
   const fetchNextSetOfRecords = () => {
     recordsDispatch({ type: TYPES.FETCH_RECORDS });
-    getPageRecords(pageNo, 20)
+    getPageRecords(pageNo, DEFAULT_PAGE_SIZE)
       .then(results => recordsDispatch({ type: TYPES.FETCH_RECORDS_SUCCESS, results }))
       .catch(error => recordsDispatch({ type: TYPES.FETCH_RECORDS_ERROR, error }));
   };
@@ -25,18 +31,29 @@ export const SpreadSheet = ({ getPageRecords }) => {
     }
   };
 
+  const getRowCells = record =>
+    Object.entries(record).map(([_, value]) => (
+      <div className='spreadsheet-row-cell' key={value}>
+        {value}
+      </div>
+    ));
+
+  const getRowData = () =>
+    results.map(record => (
+      <div className='spreadsheet-row' key={record.id}>
+        {getRowCells(record)}
+      </div>
+    ));
+
   return (
     <div className='spreadsheet' onScroll={onContainerScroll}>
-      {results &&
-        results.map(record => (
-          <div className='spreadsheet-row'>
-            {Object.entries(record).map(([_, value]) => (
-              <div className='spreadsheet-row-cell'>{value}</div>
-            ))}
-          </div>
-        ))}
+      {getRowData()}
       {isFetching && <div className='spreadsheet-message'>{LOADING_NEW_RECORDS_MESSAGE}</div>}
       {error && <div className='spreadsheet-message'>{ERROR_FETCHING_RECORDS_MESSAGE}</div>}
     </div>
   );
+};
+
+SpreadSheet.prototype = {
+  getPageRecords: PropTypes.func.isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpreadSheet } from './SpreadSheet';
+import { SpreadSheet } from './Components';
 import { getPageRecords } from './MockData';
 
 function App() {

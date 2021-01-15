@@ -1004,6 +1004,6 @@ export const getPageRecords = (page, pageSize) => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(allRecords.slice((page - 1) * pageSize, page * pageSize));
-    });
-  }, 500);
+    }, 200);
+  });
 };

@@ -1,0 +1,42 @@
+.spreadsheet {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  height: 80vh;
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid grey;
+
+  &-title {
+    color: black;
+    padding: 20px;
+  }
+
+  &-message {
+    text-align: center;
+    color: black;
+  }
+
+  &-row {
+    display: inline-flex;
+    color: black;
+    justify-content: center;
+
+    &-cell {
+      padding: 10px;
+      background-color: white;
+      width: 200px;
+      margin: 5px;
+      overflow: hidden;
+      border: 0.5px solid grey;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    &-row {
+      display: inline-flex;
+    }
+  }
+}
