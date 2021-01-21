@@ -16,7 +16,7 @@ export const recordsReducer = (state, action) => {
       return {
         ...state,
         isFetching: false,
-        results: [...state.results, ...action.results],
+        results: [...action.results],
       };
     }
     case TYPES.FETCH_RECORDS_ERROR: {

@@ -1002,8 +1002,6 @@ const recordsJSON = `[{"id":1,"first_name":"Jo ann","last_name":"Kerrane","email
 export const getPageRecords = (page, pageSize) => {
   const allRecords = JSON.parse(recordsJSON);
   return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(allRecords.slice((page - 1) * pageSize, page * pageSize));
-    }, 200);
+    resolve(allRecords.slice((page - 1) * pageSize, page * pageSize));
   });
 };
